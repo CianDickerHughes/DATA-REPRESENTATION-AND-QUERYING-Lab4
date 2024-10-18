@@ -5,9 +5,11 @@ import axios from "axios";
 // The Read
 const Read = () => {
     // array of movies of json
+    // explain: it's a react hook that allows you to add state to a functional component
     const [movies, setMovies] = useState([]);
 
     // get movies from http
+    // explain: it tells React that your component needs to do something after render
     useEffect(() => {
         axios.get('https://jsonblob.com/api/jsonblob/1287718524221775872') // json http
           .then((response) => {
